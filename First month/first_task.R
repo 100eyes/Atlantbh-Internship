@@ -22,6 +22,12 @@ missing_geocode <- rbind(names_missing_geocode, address_missing_geocode)
 rm(names_missing_geocode, address_missing_geocode)
 places_missing_address <- yelp_business$name[which(is.na(yelp_business$address))]
 
+yelp_business$longitude[which.max(yelp_business$longitude)]
+yelp_business$longitude[which.min(yelp_business$longitude)]
+
+yelp_business$latitude[which.max(yelp_business$latitude)]
+yelp_business$latitude[which.min(yelp_business$latitude)]
+
 # Data frequency
 hist(yelp_business$stars, xlab = "Stars", main = "Stars frequency")
-hist(yelp_business$review_count, breaks = 1000, xlim = 1000, xlab = "Review count", main = "Review count frequency")
+hist(yelp_business$review_count, breaks = 1000, xlim = c(0, 150), ylim = c(0, 105000), xlab = "Review count", main = "Review count frequency")
