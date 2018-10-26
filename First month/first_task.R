@@ -38,9 +38,9 @@ yelp_business$latitude[which.min(yelp_business$latitude)]
 hist(yelp_business$stars, xlab = "Stars", main = "Stars frequency")
 hist(yelp_business$review_count, breaks = 1000, xlim = c(0, 150), ylim = c(0, 105000), xlab = "Review count", main = "Review count frequency")
 
-tail(sort(table(yelp_business$city)), n=10)
-tail(sort(table(yelp_business$state)))
-tail(sort(table(yelp_business$name)), n=10)
+tail(sort(table(yelp_business$city)), n=8)
+tail(sort(table(yelp_business$state)), n=8)
+tail(sort(table(yelp_business$name)), n=8)
 
 
 # Sorting businesses by countries in North America
