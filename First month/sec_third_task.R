@@ -1,0 +1,10 @@
+# Combining longitude and latitude into new column called geo coordinates
+yelp_business$geo_coordinates <- paste(yelp_business$latitude, yelp_business$longitude, sep = ", ")
+
+# Looking for same addresses and testing if they have same geo coordinates
+num_same_address <- length(unique(yelp_business$address))
+same_address <- data.frame(table(yelp_business$address))
+business_same_address <- yelp_business[yelp_business$address %in% same_address$Var1[same_address$Freq > 1],]
+
+agg <- aggregate(geo_coordinates~address, business_same_address, length)
+new_df <- data.frame(addres = agg$address, Consistent = agg$geo_coordinates == 1)
