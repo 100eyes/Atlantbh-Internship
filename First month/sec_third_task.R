@@ -7,4 +7,7 @@ same_address <- data.frame(table(yelp_business$address))
 business_same_address <- yelp_business[yelp_business$address %in% same_address$Var1[same_address$Freq > 1],]
 
 agg <- aggregate(geo_coordinates~address, business_same_address, length)
+agg1 <- aggregate(address~geo_coordinates, business_same_address, length)
 new_df <- data.frame(addres = agg$address, Consistent = agg$geo_coordinates == 1)
+agg <- agg[order(agg$latitude), ]
+agg1 <- agg1[order(agg)]
