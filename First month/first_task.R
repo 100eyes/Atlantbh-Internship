@@ -49,7 +49,7 @@ canada_business <- yelp_business[which(yelp_business$state %in% canada_states$Co
 
 dummy_states <- yelp_business[which(!((yelp_business$state %in% us_states$Abbreviation) | (yelp_business$state %in% canada_states$Code))),]
 
-table(dummy_states$state)
+table(tail(dummy_states$state))
 
 # Checking for duplicates in businessID and names
 businessID_occur <- data.frame(table(yelp_business$business_id))
