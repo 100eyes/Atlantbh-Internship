@@ -17,3 +17,7 @@ agg1 <- agg1[order(agg)]
 agg3 <- aggregate(cbind(latitude, longitude)~address, business_same_address, max)
 agg4 <- aggregate(cbind(latitude, longitude)~address, business_same_address, min)
 agg3 <- agg3[order(agg3$latitude), ]
+
+# K-means clustering of data based on longitude and latitude
+states_clusters <- kmeans(na.omit(yelp_business[c("latitude", "longitude")]), centers = 64, iter.max = 20)
+str(states_clusters)
