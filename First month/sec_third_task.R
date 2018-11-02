@@ -18,6 +18,18 @@ agg3 <- aggregate(cbind(latitude, longitude)~address, business_same_address, max
 agg4 <- aggregate(cbind(latitude, longitude)~address, business_same_address, min)
 agg3 <- agg3[order(agg3$latitude), ]
 
+# Editing states
+
+rows_with_las <- grep("Las", yelp_business$city)
+lasvegas_businesses <- yelp_business[c(rows_with_las),]
+new_business <- yelp_business
+new_business$city[which(new_business$city %in% lasvegas_businesses$city)] <- "Las Vegas"
+
 # K-means clustering of data based on longitude and latitude
-states_clusters <- kmeans(na.omit(yelp_business[c("latitude", "longitude")]), centers = 64, iter.max = 20)
+states_clusters <- kmeans(business[c("latitude", "longitude")], centers = 64, iter.max = 30)
 str(states_clusters)
+business$clusters <- as.factor(states_clusters$cluster)
+library("ggmap")
+north_america <- get_map(location = c(lon = -105.255119, lat = 54.525961), zoom = 3)
+ggmap(north_america) + geom_point(aes(x = longitude[], y = latitude[], colour = as.factor(clusters)), data = business) +
+  ggtitle("States in North America using KMean")
