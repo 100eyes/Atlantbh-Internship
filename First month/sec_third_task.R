@@ -26,6 +26,9 @@ new_business <- yelp_business
 new_business$city[which(new_business$city %in% lasvegas_businesses$city)] <- "Las Vegas"
 
 # K-means clustering of data based on longitude and latitude
+lon_lat_na_rows <- which(is.na(yelp_business$latitude) | is.na(yelp_business$longitude))
+business <- yelp_business[-c(lon_lat_na_rows[]),]
+
 states_clusters <- kmeans(business[c("latitude", "longitude")], centers = 64, iter.max = 30)
 str(states_clusters)
 business$clusters <- as.factor(states_clusters$cluster)
@@ -33,3 +36,7 @@ library("ggmap")
 north_america <- get_map(location = c(lon = -105.255119, lat = 54.525961), zoom = 3)
 ggmap(north_america) + geom_point(aes(x = longitude[], y = latitude[], colour = as.factor(clusters)), data = business) +
   ggtitle("States in North America using KMean")
+
+k_clusters <- kmeans(business[c("latitude", "longitude")], centers = 20000, iter.max = 100)
+str(k_clusters)
+business$k_clusters <- as.factor(k_clusters$cluster)
