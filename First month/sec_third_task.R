@@ -40,3 +40,4 @@ ggmap(north_america) + geom_point(aes(x = longitude[], y = latitude[], colour = 
 k_clusters <- kmeans(business[c("latitude", "longitude")], centers = 20000, iter.max = 100)
 str(k_clusters)
 business$k_clusters <- as.factor(k_clusters$cluster)
+write.table(business[c("latitude", "longitude", "k_clusters")], file = "business.csv", sep = "\t", row.names = FALSE)
