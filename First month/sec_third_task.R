@@ -41,3 +41,4 @@ k_clusters <- kmeans(business[c("latitude", "longitude")], centers = 20000, iter
 str(k_clusters)
 business$k_clusters <- as.factor(k_clusters$cluster)
 write.table(business[c("latitude", "longitude", "k_clusters")], file = "business.csv", sep = "\t", row.names = FALSE)
+View(business[which(business$k_clusters == "9378"),])
