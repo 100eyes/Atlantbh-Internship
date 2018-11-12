@@ -40,5 +40,10 @@ ggmap(north_america) + geom_point(aes(x = longitude[], y = latitude[], colour = 
 k_clusters <- kmeans(business[c("latitude", "longitude")], centers = 20000, iter.max = 100)
 str(k_clusters)
 business$k_clusters <- as.factor(k_clusters$cluster)
-write.table(business[c("latitude", "longitude", "k_clusters")], file = "business.csv", sep = "\t", row.names = FALSE)
+write.table(business[c("name", "address", "city", "postal_code", "latitude", "longitude", "k_clusters")], file = "business.csv", sep = "\t", row.names = FALSE)
 View(business[which(business$k_clusters == "9378"),])
+
+# Generating random clusters
+random_clusters <- sample(1:20000, 20, replace = FALSE)
+random_businesses <- business[which(business$k_clusters %in% random_clusters),]
+write.table(random_businesses[c("name", "address", "city", "postal_code", "latitude", "longitude", "k_clusters")], file = "random_clusters.csv", sep = "\t", row.names = FALSE)
