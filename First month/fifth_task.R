@@ -98,16 +98,19 @@ for (x in 1:nrow(yelp_business))
     binary_score <- ""
   }
   
+  # Records with score less then first quantile 
   if(yelp_business$score[x] <= 252)
   {
     yelp_business$quality[x] <- "LOW"
   }
   
+  # Records with score between first and third quantile
   if((yelp_business$score[x] > 252) & (yelp_business$score[x] < 254))
   {
     yelp_business$quality[x] <- "MEDIUM"
   }
   
+  # Records with score larger then third quantile
   if(yelp_business$score[x] >= 254)
   {
     yelp_business$quality[x] <- "HIGH"
