@@ -118,3 +118,5 @@ for (x in 1:nrow(yelp_business))
   
   print(x) # to show current iteration 
 }
+
+write.table(yelp_business, file = "yelp_business.csv", sep = "#", row.names = FALSE)

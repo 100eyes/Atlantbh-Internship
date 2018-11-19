@@ -16,6 +16,7 @@ summary(model3)
 predict_test <- predict(model, newdata = test_set)
 predict_test3 <- predict(model3, newdata = test_set)
 summary(predict_test)
+summary(test_set$stars)
 
 # Calculating error of prediction for first model
 sse <- sum((test_set$stars - predict_test)^2)
