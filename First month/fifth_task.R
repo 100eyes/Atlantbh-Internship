@@ -119,4 +119,9 @@ for (x in 1:nrow(yelp_business))
   print(x) # to show current iteration 
 }
 
+num_high_qua <- nrow(yelp_business[which(yelp_business$quality == "HIGH"),]) 
+num_medium_qua <- nrow(yelp_business[which(yelp_business$quality == "MEDIUM"),])
+num_low_qua <- nrow(yelp_business[which(yelp_business$quality == "LOW"),])
+
 write.table(yelp_business, file = "yelp_business.csv", sep = "#", row.names = FALSE)
+
