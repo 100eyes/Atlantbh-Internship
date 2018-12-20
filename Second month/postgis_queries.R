@@ -53,3 +53,10 @@ all_yelp_categories<-stream_in(textConnection(readLines(file_name, n=1197)),verb
 
 write.table(categories, file = "unique_yelp_categories.csv", sep = "\t", row.names = FALSE)
 write.table(arizona_business, file = "arizona_business_with_layers.csv", sep = "\t", row.names = FALSE)
+
+distance_matrix <- get_postgis_query(con, "SELECT * FROM distance_matrix", geom_name = "geom")
+
+library(rpostgis)
+pgInsert(con, name = c("public", "distance_matrix"), data.obj = distance_matrix, overwrite = TRUE)
+
+grouped_data <- get_postgis_query(con, "SELECT * FROM grouped_poi_yelp", geom_name = "geom")
