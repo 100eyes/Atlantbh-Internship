@@ -1,4 +1,6 @@
-# Collecting facebook places data
+library(jsonlite)
+
+## Collecting facebook places data
 list_of_fb_places <- vector("list", 135)
 list_of_fb_places1 <- vector("list", 200)
 list_of_fb_places2 <- vector("list", 136)
@@ -7,8 +9,21 @@ for(i in seq(1, 136)){
   list_of_fb_places2[[i]] <- fromJSON(paste0("https://graph.facebook.com/v3.2/search?access_token=", acces_token, "&type=place&fields=category_list,hours,is_always_open,is_permanently_closed,location,name,overall_star_rating,parking,payment_options,phone,price_range,rating_count,restaurant_services&center=", sample_data$latitude[i+364], ",", sample_data$longitude[i+364], "&distance=100"))  
 }
 fb_places <- vector("list", 0)
+# Increasing distance for zero results queries
+query_count <- 0 # app can't make more than 200 requests
+iter_stop <- 0 # if app makes 200 requests, iter_stop remembers what was loop iteration
+for(i in seq(1, 500)){
+  if(length(fb_places[[i]]$data) == 0){
+    fb_places[[i]] <- fromJSON(paste0("https://graph.facebook.com/v3.2/search?access_token=", acces_token, "&type=place&fields=category_list,hours,is_always_open,is_permanently_closed,location,name,overall_star_rating,parking,payment_options,phone,price_range,rating_count,restaurant_services&center=", sample_data$latitude[i], ",", sample_data$longitude[i], "&distance=500"))
+    query_count <- query_count + 1
+  }
+  if(query_count == 200){
+    iter_stop <- i
+    break
+  }
+}
 
-# Collecting Google places data
+## Collecting Google places data
 google_data <- vector("list", 500)
 google_key <- "AIzaSyDgkKU2ko8K_13xyhU7BTDaOTYTPANWG3o"
 

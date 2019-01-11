@@ -1,0 +1,908 @@
+Parent,Category
+Airline,Airline Industry Services
+American Restaurant,New American Restaurant
+Amusement Park Ride,Roller Coaster
+Amusement,Arcade
+Amusement,Bingo Hall
+Amusement,Go Karting
+Amusement,Laser Tag
+Antiques & Vintage,Antique Store
+Antiques & Vintage,Auction House
+Antiques & Vintage,Flea Market
+Antiques & Vintage,Vintage Store
+Armed Forces,Military Base
+Arts & Entertainment,Amusement
+Arts & Entertainment,Amusement Park Ride
+Arts & Entertainment,Art Gallery
+Arts & Entertainment,Bowling Alley
+Arts & Entertainment,Casino
+Arts & Entertainment,Circus
+Arts & Entertainment,Comedy Club
+Arts & Entertainment,Concert Venue
+Arts & Entertainment,Movie Theatre
+Arts & Entertainment,Museum
+Arts & Entertainment,Newspaper
+Arts & Entertainment,Orchestra
+Arts & Entertainment,Performance Venue
+Arts & Entertainment,Race Track
+Arts & Entertainment,Rodeo
+Arts & Entertainment,Social Club
+Arts & Entertainment,Sports Venue & Stadium
+Arts & Entertainment,Symphony
+Arts & Entertainment,Theatre
+Arts & Entertainment,Theme Park
+Arts & Entertainment,Ticket Sales
+Arts & Entertainment,Tourist Attraction
+Arts & Entertainment,Zoo & Aquarium
+Arts & Marketing,Advertising Agency
+Arts & Marketing,Architect
+Arts & Marketing,Art Restoration
+Arts & Marketing,Artistic Services
+Arts & Marketing,Broadcasting & Media Production
+Arts & Marketing,Entertainment Service
+Arts & Marketing,Fashion Designer
+Arts & Marketing,Graphic Design
+Arts & Marketing,Image Consultant
+Arts & Marketing,Market Research Consultant
+Arts & Marketing,Marketing Consultant
+Arts & Marketing,Modeling Agency
+Arts & Marketing,Movie & Television Studio
+Arts & Marketing,Music Production
+Arts & Marketing,Photographer
+Arts & Marketing,Photographic Services & Equipment
+Arts & Marketing,Public Relations
+Arts & Marketing,Publisher
+Arts & Marketing,Screen Printing & Embroidery
+Arts & Marketing,Sports Promoter
+Arts & Marketing,Trophies & Engraving
+Arts & Marketing,Web Design
+Arts & Marketing,Web Development
+Asian Restaurant,Burmese Restaurant
+Asian Restaurant,Cambodian Restaurant
+Asian Restaurant,Chinese Restaurant
+Asian Restaurant,Filipino Restaurant
+Asian Restaurant,Himalayan Restaurant
+Asian Restaurant,Japanese Restaurant
+Asian Restaurant,Korean Restaurant
+Asian Restaurant,Malaysian Restaurant
+Asian Restaurant,Mongolian Restaurant
+Asian Restaurant,Nepalese Restaurant
+Asian Restaurant,Singaporean Restaurant
+Asian Restaurant,Taiwanese Restaurant
+Asian Restaurant,Thai Restaurant
+Asian Restaurant,Vietnamese Restaurant
+Automotive,ATVs & Golf Carts
+Automotive,Auto Body Shop
+Automotive,Auto Glass
+Automotive,Automobile Leasing
+Automotive,Automotive Consultant
+Automotive,Automotive Customizing
+Automotive,Automotive Manufacturing
+Automotive,Automotive Parts & Accessories
+Automotive,Automotive Repair
+Automotive,Automotive Restoration
+Automotive,Automotive Storage
+Automotive,Automotive Trailer Services
+Automotive,Automotive Wholesaler
+Automotive,Aviation Fuel
+Automotive,Boat Dealer
+Automotive,Car Dealership
+Automotive,Car Parts & Accessories
+Automotive,Car Wash & Detailing
+Automotive,Commercial Automotive
+Automotive,DMV
+Automotive,Emergency Roadside Service
+Automotive,Emissions Inspection
+Automotive,Exotic Car Rental
+Automotive,Gas Station
+Automotive,Motorcycle Repair
+Automotive,Motorcycles
+Automotive,Oil Lube & Filter Service
+Automotive,Race Cars
+Automotive,Railroad
+Automotive,Recreational Vehicle Dealer
+Automotive,RV Dealership
+Automotive,RV Repair
+Automotive,Smog Check Station
+Automotive,Snowmobiles
+Automotive,Tire Dealer
+Automotive,Towing Service
+Automotive,Trailer Rental
+Automotive,Truck Rental
+Automotive,Truck Towing
+Automotive,Window Service & Repair
+Bank,Commercial Bank
+Bar,Bar & Grill
+Bar,Dive Bar
+Bar,Gastropub
+Bar,Gay Bar
+Bar,Sports Bar
+Bar,Tapas Bar & Restaurant
+Bar,Wine Bar
+Book Store,Religious Book Store
+Business Services,Advertising Service
+Business Services,Business Center
+Business Services,Business Consultant
+Business Services,Business Supply Service
+Business Services,Chemicals & Gasses
+Business Services,Cleaning Service
+Business Services,Computer Services
+Business Services,Copying & Printing
+Business Services,Copywriting Service
+Business Services,Direct Mail Service
+Business Services,Document Service
+Business Services,Email Marketing
+Business Services,Employment Agency
+Business Services,Entertainment Service
+Business Services,Environmental Consultant
+Business Services,Franchising Service
+Business Services,Glass Products
+Business Services,Hair & Beauty Supply
+Business Services,Handwriting Service
+Business Services,Internet Service Provider
+Business Services,Management Service
+Business Services,Merchandising Service
+Business Services,Office Supplies
+Business Services,Pawn Shop
+Business Services,Printing Service
+Business Services,Recruiter
+Business Services,Refrigeration Sales & Service
+Business Services,Secretarial Service
+Business Services,Telemarketing Service
+Business Services,Translator
+Business Services,Transportation Service
+Business Services,Waste Management
+Business Services,Writing Service
+Cafe,Cyber Cafe
+Cafe,Internet Cafe
+Chicken Restaurant,Chicken Wings
+Chinese Restaurant,Cantonese Restaurant
+Church,African Methodist Episcopal Church
+Church,Anglican Church
+Church,Apostolic Church
+Church,Assembly of God
+Church,Baptist Church
+Church,Catholic Church
+Church,Charismatic Church
+Church,Christian Church
+Church,Christian Science Church
+Church,Church of Christ
+Church,Church of God
+Church,Church of Jesus Christ of Latter-day Saints
+Church,Congregational Church
+Church,Eastern Orthodox Church
+Church,Episcopal Church
+Church,Evangelical Church
+Church,Full Gospel Church
+Church,Holiness Church
+Church,Independent Church
+Church,Interdenominational Church
+Church,Kingdom Hall
+Church,Lutheran Church
+Church,Mennonite Church
+Church,Methodist Church
+Church,Nazarene Church
+Church,Nondenominational Church
+Church,Pentecostal Church
+Church,Presbyterian Church
+Church,Seventh Day Adventist Church
+Classes,Cooking Lesson
+Classes,Dance Instruction
+Classes,Driving School
+Classes,First Aid Class
+Classes,Music Lessons & Instruction
+Classes,Ski & Snowboard School
+Classes,Sports Instruction
+Clothing Store,Accessories Store
+Clothing Store,Bridal Shop
+Clothing Store,Children's Clothing Store
+Clothing Store,Costume Shop
+Clothing Store,Formal Wear
+Clothing Store,Men's Clothing Store
+Clothing Store,Shoe Store
+Clothing Store,Sportswear
+Clothing Store,Swimwear
+Clothing Store,Women's Clothing Store
+College & University,Medical School
+College & University,Technical Institute
+Commercial & Industrial,Automation Services
+Commercial & Industrial,Biotechnology
+Commercial & Industrial,Commercial & Industrial Equipment
+Commercial & Industrial,Elevator Services
+Commercial & Industrial,Engineering Service
+Commercial & Industrial,Fire Protection
+Commercial & Industrial,Gas & Chemical Service
+Commercial & Industrial,Ice Machines
+Commercial & Industrial,Manufacturing
+Commercial & Industrial,Mattress Manufacturing
+Commercial & Industrial,Mattress Wholesale
+Commercial & Industrial,Metals
+Commercial & Industrial,Petroleum Services
+Commercial & Industrial,Plastics
+Commercial & Industrial,Refrigeration
+Commercial & Industrial,Robotics
+Commercial & Industrial,Storage Service
+Commercial & Industrial,Textiles
+Commercial & Industrial,Vending Machine Service
+Commercial & Industrial,Warehouse
+Community & Government,Armed Forces
+Community & Government,City Hall
+Community & Government,Clubhouse
+Community & Government,Community Center
+Community & Government,Consulate & Embassy
+Community & Government,Convention Center
+Community & Government,Courthouse
+Community & Government,Education
+Community & Government,Environmental Conservation
+Community & Government,Fire Station
+Community & Government,Government Organization
+Community & Government,Halfway House
+Community & Government,Law Enforcement
+Community & Government,Library
+Community & Government,Lobbyist
+Community & Government,Newspaper
+Community & Government,Notary Public
+Community & Government,Organization
+Community & Government,Post Office
+Community & Government,Prison & Correctional Facility
+Community & Government,Public Places & Attractions
+Community & Government,Public Services
+Community & Government,Religious Center
+Community & Government,Reproductive Services
+Community & Government,School
+Community & Government,Senior Center
+Computers & Electronics,Computer Store
+Computers & Electronics,Electronics Store
+Computers & Electronics,Video Games
+Convenience Store,Lottery Retailer
+Convenience Store,Tobacco Store
+Discount Store,Outlet Store
+Discount Store,Pawn Shop
+Discount Store,Rent to Own Store
+Discount Store,Thrift or Consignment Store
+Doctor,Allergist
+Doctor,Allergy Doctor
+Doctor,Dermatologist
+Doctor,Family Doctor
+Doctor,Family Medicine Practice
+Doctor,Internal Medicine
+Doctor,OBGYN
+Doctor,Oncologist
+Doctor,Ophthalmologist
+Doctor,Optometrist
+Doctor,Otolaryngologist
+Doctor,Pediatrics
+Doctor,Plastic Surgery
+Doctor,Podiatrist
+Doctor,Psychologist
+Education,Active Life
+Education,Admissions Training
+Education,Adult Education
+Education,Art School
+Education,Athletic Education
+Education,Aviation School
+Education,Classes
+Education,College & University
+Education,Computer Training
+Education,Culinary School
+Education,Educational Camp
+Education,Educational Consultant
+Education,Educational Organization
+Education,Educational Research
+Education,Educational Service
+Education,Educational Supplies
+Education,Exchange Program
+Education,Financial Aid
+Education,Language School
+Education,Local Education
+Education,Performing Arts Education
+Education,Preschool
+Education,Private School
+Education,Public School
+Education,Religious School
+Education,School
+Education,School Fundraiser
+Education,Sorority & Fraternity
+Education,Specialty School
+Education,Trade School
+Education,Traffic School
+Education,Tutoring
+Electronic Equipment Service,Audiovisual Equipment
+Event Planning,Bands & Musicians
+Event Planning,Bartending Service
+Event Planning,Caterer
+Event Planning,DJ
+Event Planning,Entertainer
+Event Planning,Event Planner
+Event Planning,Event Venue
+Event Planning,Party Supplies
+Event Planning,Wedding Planning
+Financial Services,Accountant
+Financial Services,Appraiser
+Financial Services,Bail Bonds
+Financial Services,Bank
+Financial Services,Brokers & Franchising
+Financial Services,Cash Advance Service
+Financial Services,Collection Agency
+Financial Services,Credit Counseling
+Financial Services,Currency Exchange
+Financial Services,Estate Planning
+Financial Services,Financial Planning
+Financial Services,Insurance Agent
+Financial Services,Insurance Broker
+Financial Services,Investing Service
+Financial Services,Loans
+Financial Services,Mortgage Brokers
+Financial Services,Tax Preparation
+Food & Grocery,Brewery
+Food & Grocery,Butcher
+Food & Grocery,Candy Store
+Food & Grocery,Convenience Store
+Food & Grocery,Cupcake Shop
+Food & Grocery,Deli
+Food & Grocery,Ethnic Grocery Store
+Food & Grocery,Farmers Market
+Food & Grocery,Fruit & Vegetable Store
+Food & Grocery,Grocery Store
+Food & Grocery,Health Food Store
+Food & Grocery,Liquor Store
+Food & Grocery,Market
+Food & Grocery,Meat Shop
+Food & Grocery,Specialty Grocery Store
+Food & Restaurant,Bakery
+Food & Restaurant,Beer Garden
+Food & Restaurant,Brewery
+Food & Restaurant,Cafe
+Food & Restaurant,Cafeteria
+Food & Restaurant,Coffee Shop
+Food & Restaurant,Cupcake Shop
+Food & Restaurant,Donuts & Bagels
+Food & Restaurant,Farmers Market
+Food & Restaurant,Food Stand
+Food & Restaurant,Frozen Yogurt Shop
+Food & Restaurant,Ice Cream Parlor
+Food & Restaurant,Restaurant
+Food & Restaurant,Restaurant Wholesale
+Food & Restaurant,Salad Bar
+Food & Restaurant,Smoothie & Juice Bar
+Food & Restaurant,Sports Bar
+Food & Restaurant,Tea Room
+Food Stand,Hot Dog Stand
+Furniture Store,Furniture Repair
+Gift Shop,Collectibles Store
+Gift Shop,Cultural Gifts Store
+Gift Shop,Seasonal Store
+Hair Removal,Laser Hair Removal
+Home Improvement,Appliances
+Home Improvement,Appliances
+Home Improvement,Blinds & Curtains
+Home Improvement,Cabinets & Countertops
+Home Improvement,Carpenter
+Home Improvement,Carpet & Flooring Store
+Home Improvement,Carpet Cleaner
+Home Improvement,Cleaning Service
+Home Improvement,Concrete Contractor
+Home Improvement,Construction Service & Supply
+Home Improvement,Contractor
+Home Improvement,Damage Restoration Service
+Home Improvement,Deck & Patio
+Home Improvement,Electrician
+Home Improvement,Excavation & Wrecking
+Home Improvement,Fireplaces
+Home Improvement,Fireproofing
+Home Improvement,Garage Door Services
+Home Improvement,Garden Center
+Home Improvement,Gardener
+Home Improvement,Glass Service
+Home Improvement,Hardware & Tools Service
+Home Improvement,Hardware Store
+Home Improvement,Heating Ventilating & Air Conditioning
+Home Improvement,Home Cleaning
+Home Improvement,Home Decor
+Home Improvement,Home Inspection
+Home Improvement,Home Security
+Home Improvement,Home Theater Store
+Home Improvement,Home Window Service
+Home Improvement,Housewares
+Home Improvement,Interior Designer
+Home Improvement,Kitchen Construction
+Home Improvement,Kitchen Supplies
+Home Improvement,Landscaping
+Home Improvement,Lighting Fixtures
+Home Improvement,Locksmith
+Home Improvement,Masonry
+Home Improvement,Mattresses & Bedding
+Home Improvement,Mobile Homes
+Home Improvement,Mover
+Home Improvement,Painter
+Home Improvement,Paving & Asphalt Service
+Home Improvement,Pest Control
+Home Improvement,Plumber
+Home Improvement,Portable Building Service
+Home Improvement,Portable Toilet Rentals
+Home Improvement,Property Management
+Home Improvement,Roofer
+Home Improvement,Sewer Service
+Home Improvement,Solar Energy Service
+Home Improvement,Storage
+Home Improvement,Surveyor
+Home Improvement,Swimming Pool Maintenance
+Home Improvement,Tools Service
+Home Improvement,Upholstery Service
+Home Improvement,Wallpaper
+Home Improvement,Well Water Drilling Service
+Japanese Restaurant,Ramen Restaurant
+Japanese Restaurant,Sushi Restaurant
+Law Enforcement,Police Station
+Law Practice,Bankruptcy Lawyer
+Law Practice,Copyright Lawyer
+Law Practice,Corporate Lawyer
+Law Practice,Criminal Lawyer
+Law Practice,Divorce & Family Lawyer
+Law Practice,Employment Lawyer
+Law Practice,Estate Lawyer
+Law Practice,Governmental Law
+Law Practice,Juvenile Law
+Law Practice,Labor & Employment Law
+Law Practice,Malpractice Law
+Law Practice,Patent Trademark & Copyright Law
+Law Practice,Property Law
+Law Practice,Real Estate Lawyer
+Law Practice,Wills & Estate Lawyer
+Lifestyle Services,Adoption Service
+Lifestyle Services,Babysitter
+Lifestyle Services,Burial & Cremation Service
+Lifestyle Services,Child Care
+Lifestyle Services,Dating Service
+Lifestyle Services,Food Consultant
+Lifestyle Services,Funeral Service
+Lifestyle Services,Hospitality Service
+Lifestyle Services,House Sitter
+Lifestyle Services,Janitorial Service
+Lifestyle Services,Maid & Butler
+Lifestyle Services,Nanny
+Lifestyle Services,Personal Coaching
+Lifestyle Services,Psychic
+Lifestyle Services,Sewing & Seamstress
+Lifestyle Services,Shopping Service
+Lodging,Beach Resort
+Lodging,Bed and Breakfast
+Lodging,Cabin
+Lodging,Campground
+Lodging,Cottage
+Lodging,Hostel
+Lodging,Hotel
+Lodging,Inn
+Lodging,Lodge
+Lodging,Motel
+Lodging,Resort
+Lodging,RV Park
+Lodging,Vacation Home Rental
+Medical & Health,Acupuncture
+Medical & Health,Addiction Resources
+Medical & Health,AIDS Resources
+Medical & Health,Alternative & Holistic Health
+Medical & Health,Ambulance & Rescue
+Medical & Health,Audiologist
+Medical & Health,Blood Bank
+Medical & Health,ccupational Therapist
+Medical & Health,Chiropractor
+Medical & Health,Clinic
+Medical & Health,Counseling & Mental Health
+Medical & Health,Dentist
+Medical & Health,Disabled Persons Services
+Medical & Health,Disaster Relief
+Medical & Health,Doctor
+Medical & Health,Drug & Alcohol Rehab
+Medical & Health,First Aid Service
+Medical & Health,Genealogist
+Medical & Health,Health Agency
+Medical & Health,Health Care Administration
+Medical & Health,Healthcare Administrator
+Medical & Health,Hospital
+Medical & Health,Medical Center
+Medical & Health,Medical Equipment
+Medical & Health,Medical Lab
+Medical & Health,Medical Research
+Medical & Health,Medical Supplies
+Medical & Health,Nursing
+Medical & Health,Nursing Home
+Medical & Health,Nutritionist
+Medical & Health,Occupational Safety
+Medical & Health,Pharmacy
+Medical & Health,Physical Therapist
+Medical & Health,Physician Assistant
+Medical & Health,Plastic Surgery
+Medical & Health,Retirement & Assisted Living Facility
+Medical & Health,Speech Pathologist
+Medical & Health,Women's Health
+Museum,Art Museum
+Museum,History Museum
+Museum,Modern Art Museum
+Music Store,Musical Instrument Store
+Night Club,Adult Entertainment
+Nightlife,Bar
+Nightlife,Dance Club
+Nightlife,Hookah Lounge
+Nightlife,Jazz Club
+Nightlife,Karaoke
+Nightlife,Lounge
+Nightlife,Night Club
+Nightlife,Pub
+Organization,Charity Organization
+Organization,Community Organization
+Organization,Educational Organization
+Organization,Political Organization
+Organization,Religious Organization
+Organization,Youth Organization
+Outdoor Services,Agricultural Service
+Outdoor Services,Archaeological Services
+Outdoor Services,Awnings & Canopies
+Outdoor Services,Boat Service
+Outdoor Services,Forestry & Logging
+Outdoor Services,Geologic Service
+Outdoor Services,Marine Equipment
+Outdoor Services,Marine Service Station
+Outdoor Services,Recycling & Waste Management
+Outdoor Services,Recycling & Waste Management
+Outdoor Services,Septic Tank Service
+Outdoor Services,Septic Tank Service
+Outdoor Services,Taxidermist
+Outdoor Services,Water Filtration & Treatment
+Outdoors,Auditorium
+Outdoors,Beach
+Outdoors,Boating
+Outdoors,Bridge
+Outdoors,Camp
+Outdoors,Cemetery
+Outdoors,Fairground
+Outdoors,Farm
+Outdoors,Fishing
+Outdoors,Island
+Outdoors,Lake
+Outdoors,Marina
+Outdoors,Mountain
+Outdoors,National Park
+Outdoors,Ocean
+Outdoors,Park
+Outdoors,Picnic Ground
+Outdoors,Playground
+Outdoors,Reservoir
+Outdoors,River
+Outdoors,State Park
+Outdoors,Statue & Fountain
+Outdoors,Surfing Spot
+Outdoors,Urban Farm
+Outdoors,Water Park
+Outdoors,Wildlife Sanctuary
+Pet Service,Animal Shelter
+Pet Service,Dog Training
+Pet Service,Dog Walker
+Pet Service,Horses
+Pet Service,Kennel
+Pet Service,Pet Breeder
+Pet Service,Pet Cemetery
+Pet Service,Pet Groomer
+Pet Service,Pet Sitter
+Pet Service,Pet Store
+Pet Service,Veterinarian
+Private Transportation,Armored Cars
+Private Transportation,Charter Buses
+Private Transportation,Horse-Drawn Vehicles
+Private Transportation,Limo Service
+Private Transportation,Private Plane Charter
+Professional Services,Arts & Marketing
+Professional Services,Automotive
+Professional Services,Business Services
+Professional Services,Cable & Satellite Service
+Professional Services,Commercial & Industrial
+Professional Services,Event Planning
+Professional Services,Financial Services
+Professional Services,Law Practice
+Professional Services,Lifestyle Services
+Professional Services,Medical & Health
+Professional Services,Outdoor Services
+Professional Services,Pet Service
+Professional Services,Real Estate
+Professional Services,Repair Service
+Professional Services,Research Service
+Professional Services,Safety & First Aid Service
+Professional Services,Security
+Professional Services,Spa Beauty & Personal Care
+Professional Services,Supply & Distribution Services
+Public Places & Attractions,Highway
+Public Places & Attractions,Historical Place
+Public Places & Attractions,Landmark
+Public Places & Attractions,Monument
+Public Places & Attractions,Public Square
+Public Places & Attractions,Street
+Public Services,Child Protective Services
+Public Services,Crisis Prevention Center
+Public Services,Disability Services
+Public Services,Housing & Homeless Shelter
+Public Services,Housing Assistance Service
+Public Services,Public Utility
+Public Services,Social Services
+Public Transportation,Bus Line
+Public Transportation,Bus Station
+Public Transportation,Subway & Light Rail Station
+Public Transportation,Train Station
+Real Estate,Commercial Real Estate
+Real Estate,Escrow Services
+Real Estate,Real Estate Agent
+Real Estate,Real Estate Appraiser
+Real Estate,Real Estate Developer
+Real Estate,Real Estate Investment
+Real Estate,Real Estate Service
+Real Estate,Real Estate Title & Development
+Region,Borough
+Region,City
+Region,Country
+Region,County
+Region,Neighborhood
+Region,State
+Religious Center,Buddhist Temple
+Religious Center,Church
+Religious Center,Clergy
+Religious Center,Convent & Monastery
+Religious Center,Hindu Temple
+Religious Center,Mission
+Religious Center,Mosque
+Religious Center,Religious Book Store
+Religious Center,Sikh Temple
+Religious Center,Synagogue
+Religious Organization,Salvation Army
+Rental Company,Bike Rental & Bike Share
+Rental Company,Boat Rental
+Rental Company,Car Rental
+Rental Company,Scooter Rental
+Residence & Other,Apartment & Condo Building
+Residence & Other,Campus Building
+Residence & Other,Dorm
+Residence & Other,Just For Fun
+Residence & Other,Workplace & Office
+Restaurant,Afghani Restaurant
+Restaurant,African Restaurant
+Restaurant,American Restaurant
+Restaurant,Argentine Restaurant
+Restaurant,Asian Fusion Restaurant
+Restaurant,Asian Restaurant
+Restaurant,Bar & Grill
+Restaurant,Barbecue Restaurant
+Restaurant,Basque Restaurant
+Restaurant,Belgian Restaurant
+Restaurant,Brazilian Restaurant
+Restaurant,Breakfast & Brunch Restaurant
+Restaurant,British Restaurant
+Restaurant,Buffet Restaurant
+Restaurant,Burger Restaurant
+Restaurant,Cafe
+Restaurant,Cajun & Creole Restaurant
+Restaurant,Canadian Restaurant
+Restaurant,Caribbean Restaurant
+Restaurant,Chicken Restaurant
+Restaurant,Continental Restaurant
+Restaurant,Crêperie
+Restaurant,Cuban Restaurant
+Restaurant,Deli
+Restaurant,Dessert Restaurant
+Restaurant,Dim Sum Restaurant
+Restaurant,Diner
+Restaurant,Drive In Restaurant
+Restaurant,Ethiopian Restaurant
+Restaurant,Family Style Restaurant
+Restaurant,Fast Food Restaurant
+Restaurant,Fine Dining Restaurant
+Restaurant,Fish & Chips Shop
+Restaurant,Fondue Restaurant
+Restaurant,French Restaurant
+Restaurant,Gastropub
+Restaurant,German Restaurant
+Restaurant,Gluten-Free Restaurant
+Restaurant,Greek Restaurant
+Restaurant,Halal Restaurant
+Restaurant,Hawaiian Restaurant
+Restaurant,Health Food Restaurant
+Restaurant,Hot Dog Joint
+Restaurant,Hungarian Restaurant
+Restaurant,Indian Restaurant
+Restaurant,Indonesian Restaurant
+Restaurant,International Restaurant
+Restaurant,Irish Restaurant
+Restaurant,Italian Restaurant
+Restaurant,Kosher Restaurant
+Restaurant,Late Night Restaurant
+Restaurant,Latin American Restaurant
+Restaurant,Lebanese Restaurant
+Restaurant,Live & Raw Food Restaurant
+Restaurant,Mediterranean Restaurant
+Restaurant,Mexican Restaurant
+Restaurant,Middle Eastern Restaurant
+Restaurant,Modern European Restaurant
+Restaurant,Moroccan Restaurant
+Restaurant,Pakistani Restaurant
+Restaurant,Persian Restaurant
+Restaurant,Peruvian Restaurant
+Restaurant,Pizza Place
+Restaurant,Polish Restaurant
+Restaurant,Polynesian Restaurant
+Restaurant,Portuguese Restaurant
+Restaurant,Russian Restaurant
+Restaurant,Sandwich Shop
+Restaurant,Scandinavian Restaurant
+Restaurant,Seafood Restaurant
+Restaurant,Soul Food Restaurant
+Restaurant,Soup Restaurant
+Restaurant,Southern Restaurant
+Restaurant,Southwestern Restaurant
+Restaurant,Spanish Restaurant
+Restaurant,Steakhouse
+Restaurant,Take Out Restaurant
+Restaurant,Tapas Bar & Restaurant
+Restaurant,Tex-Mex Restaurant
+Restaurant,Turkish Restaurant
+Restaurant,Vegetarian & Vegan Restaurant
+School,Elementary School
+School,High School
+School,Junior High School
+School,Middle School
+School,Day Care & Preschool
+Security,Patrol & Security
+Security,Private Investigator
+Shopping & Retail,Antiques & Vintage
+Shopping & Retail,Arts & Crafts Supply Store
+Shopping & Retail,Bank
+Shopping & Retail,Big Box Retailer
+Shopping & Retail,Bike Shop
+Shopping & Retail,Book Store
+Shopping & Retail,Camera Store
+Shopping & Retail,Clothing Store
+Shopping & Retail,Comic Book Store
+Shopping & Retail,Computers & Electronics
+Shopping & Retail,Convenience Store
+Shopping & Retail,Cosmetics & Beauty Supply
+Shopping & Retail,Department Store
+Shopping & Retail,Discount Store
+Shopping & Retail,Drugstore
+Shopping & Retail,Dry Cleaner
+Shopping & Retail,DVD & Video Store
+Shopping & Retail,Eye Wear
+Shopping & Retail,Fireworks Retailer
+Shopping & Retail,Florist
+Shopping & Retail,Food & Grocery
+Shopping & Retail,Furniture Store
+Shopping & Retail,Gift Shop
+Shopping & Retail,Gun Store
+Shopping & Retail,Home Improvement
+Shopping & Retail,Jewelry Store
+Shopping & Retail,Laundromat
+Shopping & Retail,Luggage Service
+Shopping & Retail,Mobile Phone Shop
+Shopping & Retail,Music Store
+Shopping & Retail,Office Supplies
+Shopping & Retail,Other
+Shopping & Retail,Outdoor Equipment Store
+Shopping & Retail,Party Center
+Shopping & Retail,Pet Store
+Shopping & Retail,Shopping District
+Shopping & Retail,Shopping Mall
+Shopping & Retail,Signs & Banner Service
+Shopping & Retail,Sporting Goods Store
+Shopping & Retail,Toy Store
+Shopping & Retail,Wholesale & Supply Store
+Shopping & Retail,Winery & Vineyard
+Spa Beauty & Personal Care,Aromatherapy
+Spa Beauty & Personal Care,Barber Shop
+Spa Beauty & Personal Care,Beauty Salon
+Spa Beauty & Personal Care,Cosmetics & Beauty Supply
+Spa Beauty & Personal Care,Day Spa
+Spa Beauty & Personal Care,Esthethics
+Spa Beauty & Personal Care,Hair Removal
+Spa Beauty & Personal Care,Hair Replacement
+Spa Beauty & Personal Care,Hair Salon
+Spa Beauty & Personal Care,Hairpieces & Extensions
+Spa Beauty & Personal Care,Health Spa
+Spa Beauty & Personal Care,Makeup Artist
+Spa Beauty & Personal Care,Massage
+Spa Beauty & Personal Care,Medical Spa
+Spa Beauty & Personal Care,Nail Salon
+Spa Beauty & Personal Care,Skin Care
+Spa Beauty & Personal Care,Spa
+Spa Beauty & Personal Care,Tanning Salon
+Spa Beauty & Personal Care,Tattoo & Piercing
+Spa Beauty & Personal Care,Teeth Whitening
+Spa Beauty & Personal Care,Wig Store
+Sports & Recreation,Archery
+Sports & Recreation,Batting Cage
+Sports & Recreation,Boat Rental
+Sports & Recreation,Cheerleading
+Sports & Recreation,Driving Range
+Sports & Recreation,Fitness Center
+Sports & Recreation,Golf Course
+Sports & Recreation,Gun Range
+Sports & Recreation,Gym
+Sports & Recreation,Hot Air Balloons
+Sports & Recreation,Hunting and Fishing
+Sports & Recreation,Ice Skating
+Sports & Recreation,Martial Arts
+Sports & Recreation,Miniature Golf
+Sports & Recreation,Mountain Biking
+Sports & Recreation,Outdoor Recreation
+Sports & Recreation,Paintball
+Sports & Recreation,Personal Trainer
+Sports & Recreation,Physical Fitness
+Sports & Recreation,Pool & Billiards
+Sports & Recreation,Racquetball Court
+Sports & Recreation,Rafting
+Sports & Recreation,Recreation Center
+Sports & Recreation,Recreation Center
+Sports & Recreation,Rock Climbing
+Sports & Recreation,Scuba Diving
+Sports & Recreation,Ski & Snowboard School
+Sports & Recreation,Ski Resort
+Sports & Recreation,Sky Diving
+Sports & Recreation,Sports Center
+Sports & Recreation,Sports Club
+Sports & Recreation,Sports Instruction
+Sports & Recreation,Swimming Pool
+Sports & Recreation,Tennis
+Sports & Recreation,Yoga & Pilates
+Suppy & Distribution Services,Bank Equipment & Service
+Suppy & Distribution Services,Book & Magazine Distribution
+Suppy & Distribution Services,Carnival Supplies
+Suppy & Distribution Services,Clothing Supply & Distribution
+Suppy & Distribution Services,Dental Equipment
+Suppy & Distribution Services,Drinking Water Distribution
+Suppy & Distribution Services,Electronic Equipment Service
+Suppy & Distribution Services,Equipment Service & Supply
+Suppy & Distribution Services,Food & Beverage Service & Distribution
+Suppy & Distribution Services,Food & Beverage Service & Distribution
+Suppy & Distribution Services,Hotel Supply Service
+Suppy & Distribution Services,Inventory Control Service
+Suppy & Distribution Services,Jewelry Supplier
+Suppy & Distribution Services,Laboratory Equipment
+Suppy & Distribution Services,Medical Equipment
+Suppy & Distribution Services,Medical Supplies
+Suppy & Distribution Services,Packaging Supplies & Equipment
+Suppy & Distribution Services,Promotional Item Services
+Suppy & Distribution Services,Radio & Communication Equipment
+Suppy & Distribution Services,Restaurant Supply
+Suppy & Distribution Services,Rubber Service & Supply
+Suppy & Distribution Services,Service Station Supply
+Suppy & Distribution Services,Tanning Salon Supplier
+Suppy & Distribution Services,Theatrical Equipment
+Tourist Attraction,Museum
+Tours & Sightseeing,Cruise Excursions
+Tours & Sightseeing,Eco Tours
+Tours & Sightseeing,Rental Shop
+Tours & Sightseeing,Tour Company
+Tours & Sightseeing,Tour Guide
+Tours & Sightseeing,Tourist Information
+Travel &Transportation,Airline
+Travel &Transportation,Airport
+Travel &Transportation,Airport Lounge
+Travel &Transportation,Airport Shuttle
+Travel &Transportation,Airport Terminal
+Travel &Transportation,Cargo & Freight
+Travel &Transportation,Consulate & Embassy
+Travel &Transportation,Cruise
+Travel &Transportation,Ferry & Boat
+Travel &Transportation,Lodging
+Travel &Transportation,Parking
+Travel &Transportation,Passport & Visa Service
+Travel &Transportation,Port
+Travel &Transportation,Private Transportation
+Travel &Transportation,Public Transportation
+Travel &Transportation,Rental Company
+Travel &Transportation,School Transportation
+Travel &Transportation,Taxi
+Travel &Transportation,Tours & Sightseeing
+Travel &Transportation,Travel Agency
+Vietnamese Restaurant,Pho Restaurant
+Wholesale & Supply Store,Restaurant Wholesale
+Women's Health,Abortion Services
+Women's Health,Pregnancy & Childbirth Service
+Workplace & Office,Corporate Office
+Workplace & Office,Meeting Room
+Workplace & Office,Startup
+Zoo & Aquarium,Petting Zoo
