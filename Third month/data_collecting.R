@@ -51,3 +51,19 @@ for(i in seq(1, length(google_data))){
                                                google_data[[i]]$results$place_id,
                                                "&fields=", fields, "&key=", google_key))
 }
+
+# Getting phone numbers from Yelp
+sample_data$international_phone <- NA
+sample_data$display_phone <- NA
+for(i in seq(407, nrow(sample_data))){
+  url <- paste0("https://api.yelp.com/v3/businesses/", sample_data$business_id[i])
+  temp_response <- GET(url, add_headers(Authorization = "Bearer MKkF5RHHSNaZP0zQwjw0jHluUER8ySewOTsiyi9cgAutb9bgqauz3T3mbEW4xP7NF8ppmTapUo6uqMzQgBOM_beSD5YhDeaxu6BlA_EPr2zk4dvNen3tfJUErqs4XHYx"))
+  if(http_error(temp_response)){
+    next
+  }
+  temp_var <- content(temp_response)
+  sample_data$international_phone[i] <- temp_var$phone
+  sample_data$display_phone[i] <- temp_var$display_phone
+}
+
+
