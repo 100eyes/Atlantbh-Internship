@@ -1,3 +1,66 @@
+# Adding layers to sample Yelp data
+for(i in 1:nrow(sample_data)){
+  for(j in 1:10){
+    # Getting the one category from categories string
+    category <- word(sample_data$categories[i], j, sep = fixed(", "))
+    # Break the loop if we reached the end of categories string in sample_data
+    if(is.na(category)){
+      break
+    }
+    
+    for(k in 1:nrow(yelp_categories)){
+      
+      if(category == yelp_categories$title[k]){
+        
+        # First layer vaule
+        # if it doesn't exist yet, copy categories$layer in it and break 
+        # categories for loop (third one)
+        if(is.na(sample_data$layer1[i])){
+          if(is.na(yelp_categories$`parents/0`[k])){
+            sample_data$layer1[i] <- yelp_categories$alias[k]
+            break
+          }
+          sample_data$layer1[i] <- yelp_categories$`parents/0`[k]
+          break
+        }
+        
+        # Second layer value
+        # if it is NA and it's not included in previus layer
+        # copy categories$layer in it and break
+        if((is.na(sample_data$layer2[i])) & (sample_data$layer1[i] != yelp_categories$alias[k])){
+          if(is.na(yelp_categories$`parents/0`[k])){
+            sample_data$layer2[i] <- yelp_categories$alias[k]
+            break
+          }
+          sample_data$layer2[i] <- yelp_categories$`parents/0`[k]
+          break
+        }
+        
+        # Third layer value
+        # if it isn't NA and not equal to two previus layers
+        # copy value of categories$layer in it and break
+        if((is.na(sample_data$layer3[i])) & (sample_data$layer1[i] != yelp_categories$alias[k]) & (sample_data$layer2[i] != yelp_categories$alias[k])){
+          if(is.na(yelp_categories$`parents/0`[k])){
+            sample_data$layer3[i] <- yelp_categories$alias[k]
+            break
+          }
+          sample_data$layer3[i] <- yelp_categories$alias[k]
+          break
+        }
+      }
+    }
+    
+    # If all three layers have value
+    # go to the next row
+    if(!(is.na(sample_data$layer3[i]))){
+      break
+    }
+  }
+}
+
+
+
+
 #######################################
 # Scoring algorithm for Facebook data #
 #######################################
@@ -65,6 +128,146 @@ for(i in seq(1, 500)){
     }
   }
 }
+
+# Calculating matching score for Facbook and Yelp data
+# Score is calculated by adding name score, scaled distance, phone number and category matching
+# score = name_score + scaled_distance + phone_score + category_score
+# name_score = token sort ratio, 
+# scaled_distance = 20, if distance <= 10, 15, if 10 < distance <= 50, 10, if 50 < distance <= 100, 
+#                   5, if 100 <= distance < 250, 0 othervise
+# phone_score = 10, if matched, 0 if not
+# category_score = if one of layers match score is 20, if not score is 0
+for(i in seq(1, 500)){
+  if(is.null(fb_places[[i]]$data$name_score)){
+    next
+  }
+  score <- data.frame(name_score=integer(nrow(fb_places[[i]]$data)),
+                      distance_score=integer(nrow(fb_places[[i]]$data)),
+                      phone_score=integer(nrow(fb_places[[i]]$data)),
+                      category_score=integer(nrow(fb_places[[i]]$data)),
+                      sum_score = integer(nrow(fb_places[[i]]$data)),
+                      matching = character(nrow(fb_places[[i]]$data)))
+  score <- transform(score, name_score=as.integer(name_score),
+                     distance_score=as.integer(distance_score),
+                     phone_score=as.integer(phone_score),
+                     category_score=as.integer(category_score),
+                     sum_score=as.integer(nrow(sum_score)),
+                     matching=as.character(matching))
+  for(j in seq(1, nrow(fb_places[[i]]$data))){
+    score$name_score[j] <- fb_places[[i]]$data$name_score[j]
+    if(fb_places[[i]]$data$distance[j] <= 10){
+      score$distance_score[j] <- 20
+    }
+    if((fb_places[[i]]$data$distance[j] > 10) & (fb_places[[i]]$data$distance[j] <= 20)){
+      score$distance_score[j] <- 15
+    }
+    if((fb_places[[i]]$data$distance[j] > 20) & (fb_places[[i]]$data$distance[j] <= 30)){
+      score$distance_score[j] <- 10
+    }
+    if((fb_places[[i]]$data$distance[j] > 30) & (fb_places[[i]]$data$distance[j] <= 40)){
+      score$distance_score[j] <- 5
+    }
+    if((fb_places[[i]]$data$distance[j] > 40) & (fb_places[[i]]$data$distance[j] <= 50)){
+      score$distance_score[j] <- 2
+    }
+    if((fb_places[[i]]$data$distance[j] > 50) & (fb_places[[i]]$data$distance[j] <= 65)){
+      score$distance_score[j] <- 0
+    }
+    if((fb_places[[i]]$data$distance[j] > 65) & (fb_places[[i]]$data$distance[j] <= 100)){
+      score$distance_score[j] <- -5
+    }
+    if(fb_places[[i]]$data$distance[j] > 100){
+      score$distance_score[j] <- -8
+    }
+    if(!is.null(fb_places[[i]]$data$phone[j])){
+      if((sample_data$display_phone[i] == fb_places[[i]]$data$phone[j]) &
+        !is.na(sample_data$display_phone[i]) & !is.na(fb_places[[i]]$data$phone[j])){
+        score$phone_score[j] <- 10
+      } else {
+        score$phone_score[j] <- 0
+      }
+    } else {
+      score$phone_score[j] <- 0
+    }
+    for(k in seq(1, length(fb_places[[i]]$data$category_list[[j]]$yelp_layer))){
+      if(sample_data$layer1[i] == fb_places[[i]]$data$category_list[[j]]$yelp_layer[k] & !is.na(sample_data$layer1[i])
+         & !is.na(fb_places[[i]]$data$category_list[[j]]$yelp_layer[k])){
+        score$category_score[j] <- 20
+        break
+      }
+      if(sample_data$layer2[i] == fb_places[[i]]$data$category_list[[j]]$yelp_layer[k] & !is.na(sample_data$layer2[i])
+         & !is.na(fb_places[[i]]$data$category_list[[j]]$yelp_layer[k])){
+        score$category_score[j] <- 20
+        break
+      }
+      if(sample_data$layer3[i] == fb_places[[i]]$data$category_list[[j]]$yelp_layer[k] & !is.na(sample_data$layer3[i])
+         & !is.na(fb_places[[i]]$data$category_list[[j]]$yelp_layer[k])){
+        score$category_score[j] <- 20
+        break
+      }
+    }
+    score$sum_score[j] <- sum(score$name_score[j], score$distance_score[j], score$phone_score[j], score$category_score[j], na.rm = TRUE)
+  }
+  fb_places[[i]]$data$score <- score
+}
+
+# Editing phones in Yelp and Facebook data for better matching
+# Adjusting name score
+for(i in seq(1, 500)){
+  if(is.na(sample_data$display_phone[i])){
+    fb_places[[i]]$data$score$phone_score <- 0
+    next
+  }
+  if(is.null(fb_places[[i]]$data$name_score)){
+    next
+  }
+  if(substring(sample_data$display_phone[i], 1, 1) == "+"){
+    sample_data$display_phone[i] <- gsub("-", "", substring(sample_data$display_phone[i], 4))
+  }
+  if(substring(sample_data$display_phone[i], 1, 1) == "("){
+    sample_data$display_phone[i] <- gsub(")", "", substring(sample_data$display_phone[i], 2))
+    sample_data$display_phone[i] <- gsub(" ", "", sample_data$display_phone[i])
+    sample_data$display_phone[i] <- gsub("-", "", sample_data$display_phone[i])
+  }
+  for(j in seq(1, length(fb_places[[i]]$data$phone))){
+    if(is.null(fb_places[[i]]$data$phone[j])){
+      fb_places[[i]]$data$score$phone_score[j] <- 0
+      next
+    }
+    if(is.na(fb_places[[i]]$data$phone[j])){
+      fb_places[[i]]$data$score$phone_score[j] <- 0
+      next
+    }
+    fb_places[[i]]$data$phone[j] <- gsub(")", "", substring(fb_places[[i]]$data$phone[j], 2))
+    fb_places[[i]]$data$phone[j] <- gsub(" ", "", fb_places[[i]]$data$phone[j])
+    fb_places[[i]]$data$phone[j] <- gsub("-", "", fb_places[[i]]$data$phone[j])
+    
+    if(sample_data$display_phone[i] == fb_places[[i]]$data$phone[j]){
+      fb_places[[i]]$data$score$phone_score[j] <- 10
+    } else {
+      fb_places[[i]]$data$score$phone_score <- 0
+    }
+    
+    fb_places[[i]]$data$score$name_score[j] <- fb_places[[i]]$data$score$name_score[j]/2
+    fb_places[[i]]$data$score$sum_score[j] <- sum(fb_places[[i]]$data$score$name_score[j], fb_places[[i]]$data$score$distance_score[j],
+                                                  fb_places[[i]]$data$score$phone_score[j], fb_places[[i]]$data$score$category_score[j],
+                                                  na.rm = TRUE)
+  }
+}
+
+for(i in seq(1, 500)){
+  if(is.null(fb_places[[i]]$data$name_score)){
+    next
+  }
+  for(j in seq(1, nrow(fb_places[[i]]$data$score))){
+    if(fb_places[[i]]$data$score$sum_score[j] >= 78){
+      fb_places[[i]]$data$score$matching[j] <- "MATCHED"
+    } else {
+      fb_places[[i]]$data$score$matching[j] <- "NOT MATCHED"
+    }
+  }
+}
+
 
 #####################################
 # Scoring algorithm for Google data #
