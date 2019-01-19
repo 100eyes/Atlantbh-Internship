@@ -214,11 +214,24 @@ for(i in seq(1, 500)){
 # Editing phones in Yelp and Facebook data for better matching
 # Adjusting name score
 for(i in seq(1, 500)){
-  if(is.na(sample_data$display_phone[i])){
-    fb_places[[i]]$data$score$phone_score <- 0
+  if(is.null(fb_places[[i]]$data$name_score)){
     next
   }
-  if(is.null(fb_places[[i]]$data$name_score)){
+  for(j in seq(1, length(fb_places[[i]]$data$phone))){
+    if(is.null(fb_places[[i]]$data$phone[j])){
+      next
+    }
+    if(is.na(fb_places[[i]]$data$phone[j])){
+      next
+    }
+    fb_places[[i]]$data$phone[j] <- gsub(")", "", substring(fb_places[[i]]$data$phone[j], 2))
+    fb_places[[i]]$data$phone[j] <- gsub(" ", "", fb_places[[i]]$data$phone[j])
+    fb_places[[i]]$data$phone[j] <- gsub("-", "", fb_places[[i]]$data$phone[j])
+  }
+}
+
+for(i in seq(1, 500)){
+  if(is.na(sample_data$display_phone[i])){
     next
   }
   if(substring(sample_data$display_phone[i], 1, 1) == "+"){
@@ -229,26 +242,38 @@ for(i in seq(1, 500)){
     sample_data$display_phone[i] <- gsub(" ", "", sample_data$display_phone[i])
     sample_data$display_phone[i] <- gsub("-", "", sample_data$display_phone[i])
   }
+}
+
+for(i in seq(1, 500)){
+  if(is.na(sample_data$display_phone[i])){
+    fb_places[[i]]$data$score$phone_score <- 0
+    next
+  }
+  if(is.null(fb_places[[i]]$data$name_score)){
+    next
+  }
   for(j in seq(1, length(fb_places[[i]]$data$phone))){
     if(is.null(fb_places[[i]]$data$phone[j])){
       fb_places[[i]]$data$score$phone_score[j] <- 0
       next
     }
     if(is.na(fb_places[[i]]$data$phone[j])){
-      fb_places[[i]]$data$score$phone_score[j] <- 0
-      next
-    }
-    fb_places[[i]]$data$phone[j] <- gsub(")", "", substring(fb_places[[i]]$data$phone[j], 2))
-    fb_places[[i]]$data$phone[j] <- gsub(" ", "", fb_places[[i]]$data$phone[j])
-    fb_places[[i]]$data$phone[j] <- gsub("-", "", fb_places[[i]]$data$phone[j])
-    
-    if(sample_data$display_phone[i] == fb_places[[i]]$data$phone[j]){
+       fb_places[[i]]$data$score$phone_score[j] <- 0
+       next
+     }
+
+    if(strcmp(sample_data$display_phone[i], fb_places[[i]]$data$phone[j])){
       fb_places[[i]]$data$score$phone_score[j] <- 10
-    } else {
-      fb_places[[i]]$data$score$phone_score <- 0
-    }
-    
-    fb_places[[i]]$data$score$name_score[j] <- fb_places[[i]]$data$score$name_score[j]/2
+    } 
+  }
+}
+
+for(i in seq(1, 500)){
+  if(is.null(fb_places[[i]]$data$name_score)){
+    next
+  }
+  for(j in seq(1, nrow(fb_places[[i]]$data))){
+    fb_places[[i]]$data$score$name_score[j] <- fb_places[[i]]$data$name_score[j]/2
     fb_places[[i]]$data$score$sum_score[j] <- sum(fb_places[[i]]$data$score$name_score[j], fb_places[[i]]$data$score$distance_score[j],
                                                   fb_places[[i]]$data$score$phone_score[j], fb_places[[i]]$data$score$category_score[j],
                                                   na.rm = TRUE)
@@ -260,7 +285,7 @@ for(i in seq(1, 500)){
     next
   }
   for(j in seq(1, nrow(fb_places[[i]]$data$score))){
-    if(fb_places[[i]]$data$score$sum_score[j] >= 78){
+    if(fb_places[[i]]$data$score$sum_score[j] >= 70){
       fb_places[[i]]$data$score$matching[j] <- "MATCHED"
     } else {
       fb_places[[i]]$data$score$matching[j] <- "NOT MATCHED"
@@ -339,6 +364,100 @@ for(i in seq(1, 500)){
     }
   }
 }
+
+# Matching algorithm for Google and Yelp data
+for(i in seq(1, 500)){
+  if(google_data[[i]]$status == "ZERO_RESULTS"){
+    next
+  }
+  score <- data.frame(name_score=integer(nrow(google_data[[i]]$results)),
+                      distance_score=integer(nrow(google_data[[i]]$results)),
+                      phone_score=integer(nrow(google_data[[i]]$results)),
+                      category_score=integer(nrow(google_data[[i]]$results)),
+                      sum_score = integer(nrow(google_data[[i]]$results)),
+                      matching = character(nrow(google_data[[i]]$results)))
+  score <- transform(score, name_score=as.integer(name_score),
+                     distance_score=as.integer(distance_score),
+                     phone_score=as.integer(phone_score),
+                     category_score=as.integer(category_score),
+                     sum_score=as.integer(nrow(sum_score)),
+                     matching=as.character(matching))
+  for(j in seq(1, nrow(google_data[[i]]$results))){
+    score$name_score[j] <- google_data[[i]]$results$name_score[j]/2
+    if(google_data[[i]]$results$distance[j] <= 10){
+      score$distance_score[j] <- 20
+    }
+    if((google_data[[i]]$results$distance[j] > 10) & (google_data[[i]]$results$distance[j] <= 20)){
+      score$distance_score[j] <- 15
+    }
+    if((google_data[[i]]$results$distance[j] > 20) & (google_data[[i]]$results$distance[j] <= 30)){
+      score$distance_score[j] <- 10
+    }
+    if((google_data[[i]]$results$distance[j] > 30) & (google_data[[i]]$results$distance[j] <= 40)){
+      score$distance_score[j] <- 5
+    }
+    if((google_data[[i]]$results$distance[j] > 40) & (google_data[[i]]$results$distance[j] <= 50)){
+      score$distance_score[j] <- 2
+    }
+    if((google_data[[i]]$results$distance[j] > 50) & (google_data[[i]]$results$distance[j] <= 65)){
+      score$distance_score[j] <- 0
+    }
+    if((google_data[[i]]$results$distance[j] > 65) & (google_data[[i]]$results$distance[j] <= 100)){
+      score$distance_score[j] <- -5
+    }
+    if(google_data[[i]]$results$distance[j] > 100){
+      score$distance_score[j] <- -8
+    }
+    if(!is.null(google_place_details[[i]][[j]]$result$international_phone_number)){
+      if(!is.na(sample_data$display_phone[i]) & !is.na(google_place_details[[i]][[j]]$result$international_phone_number)){
+        google_place_details[[i]][[j]]$result$international_phone_number <- gsub(" ", "", google_place_details[[i]][[j]]$result$international_phone_number)
+        google_place_details[[i]][[j]]$result$international_phone_number <- gsub("-", "", google_place_details[[i]][[j]]$result$international_phone_number)
+        if(sample_data$international_phone[i] == google_place_details[[i]][[j]]$result$international_phone_number){
+          score$phone_score[j] <- 10
+        } else {
+          score$phone_score[j] <- 0
+        }
+      } else {
+      score$phone_score[j] <- 0
+      }
+    } else {
+      score$phone_score[j] <- 0
+    }
+    for(k in seq(2, ncol(google_data[[i]]$results$yelp_layer))){
+      if(sample_data$layer1[i] == google_data[[i]]$results$yelp_layer[j,k] & !is.na(sample_data$layer1[i])
+         & !is.na(google_data[[i]]$results$yelp_layer[j,k])){
+        score$category_score[j] <- 20
+        break
+      }
+      if(sample_data$layer2[i] == google_data[[i]]$results$yelp_layer[j,k] & !is.na(sample_data$layer2[i])
+         & !is.na(google_data[[i]]$results$yelp_layer[j,k])){
+        score$category_score[j] <- 20
+        break
+      }
+      if(sample_data$layer3[i] == google_data[[i]]$results$yelp_layer[j,k] & !is.na(sample_data$layer3[i])
+         & !is.na(google_data[[i]]$results$yelp_layer[j,k])){
+        score$category_score[j] <- 20
+        break
+      }
+    }
+    score$sum_score[j] <- sum(score$name_score[j], score$distance_score[j], score$phone_score[j], score$category_score[j], na.rm = TRUE)
+  }
+  google_data[[i]]$results$score <- score
+}
+
+for(i in seq(1, 500)){
+  if(google_data[[i]]$status == "ZERO_RESULTS"){
+    next
+  }
+  for(j in seq(1, nrow(google_data[[i]]$results))){
+   if(google_data[[i]]$results$score$sum_score[j] >= 78){
+     google_data[[i]]$results$score$matching[j] <- "MATCHED"
+   } else {
+     google_data[[i]]$results$score$matching[j] <- "NOT MATCHED"
+   }
+  }
+}
+
 
 
 
