@@ -450,7 +450,7 @@ for(i in seq(1, 500)){
     next
   }
   for(j in seq(1, nrow(google_data[[i]]$results))){
-   if(google_data[[i]]$results$score$sum_score[j] >= 78){
+   if(google_data[[i]]$results$score$sum_score[j] >= 70){
      google_data[[i]]$results$score$matching[j] <- "MATCHED"
    } else {
      google_data[[i]]$results$score$matching[j] <- "NOT MATCHED"
