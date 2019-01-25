@@ -563,4 +563,39 @@ potentially_google_match <- potentially_google_match[1:2200,]
 write.table(potentially_google_match, file = "potentially_google_match.csv", sep = "\t", row.names = FALSE, na = "")
 
 
-# Orginazing
+distance_fb_not_matched <- integer(1000)
+iterator <- 0
+for(i in seq(1, 500)){
+  for(j in seq(1, nrow(fb_places[[i]]$data))){
+    if(is.null(fb_places[[i]]$data$distance)){
+      iterator <- iterator + 1
+      distance_fb_not_matched[iterator] <- as.integer(NA)
+      break
+    }
+    if(fb_places[[i]]$data$score$matching[j] == "NOT MATCHED"){
+      iterator <- iterator + 1
+      distance_fb_not_matched[iterator] <- fb_places[[i]]$data$distance[j]
+    }
+  }
+}
+
+distance_google_not_matched <- integer(1000)
+iterator <- 0
+for(i in seq(1, 500)){
+  if(google_data[[i]]$status == "ZERO_RESULTS"){
+    iterator <- iterator + 1
+    distance_google_not_matched[iterator] <- as.integer(NA)
+    next
+  }
+  for(j in seq(1, nrow(google_data[[i]]$results))){
+    if(is.null(google_data[[i]]$results$distance)){
+      iterator <- iterator + 1
+      distance_google_not_matched[iterator] <- as.integer(NA)
+      break
+    }
+    if(google_data[[i]]$results$score$matching[j] == "NOT MATCHED"){
+      iterator <- iterator + 1
+      distance_google_not_matched[iterator] <- google_data[[i]]$results$distance[j]
+    }
+  }
+}
